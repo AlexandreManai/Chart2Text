@@ -1,23 +1,18 @@
-# Chart-to-Text: Generating Natural Language Explanations for Charts by Adapting the Transformer Model
+# Code review - Chart-to-Text: Generating Natural Language Explanations for Charts by Adapting the Transformer Model
+Original repository: [Chart2Text by Jason Obeid](https://github.com/JasonObeid/Chart2Text)
+
 Code for [Chart-to-Text: Generating Natural Language Explanations for Charts by Adapting the Transformer Model](https://arxiv.org/abs/2010.09142).
-
-Much of the code is adapted from **Enhanced Transformer Model for Data-to-Text Generation** [\[PDF\]](https://www.aclweb.org/anthology/D19-5615/) (Gong, Crego, Senellart; WNGT2019). https://github.com/gongliym/data2text-transformer
-
-This project aims to automatically generate salient summaries from a chart's data table using a modified Transformer model.
-
-## 2022 Update
-
-Newer paper + dataset on this topic: [Chart-to-Text: A Large-Scale Benchmark for Chart Summarization](https://github.com/vis-nlp/Chart-to-text) [(Paper on arXiv)](https://arxiv.org/abs/2203.06486)
-
-Also visit [SciCap: Scientific Figures Dataset](https://github.com/tingyaohsu/SciCap) for a related project with a larger and more detailed dataset.
 
 ## Dataset
 
-The dataset is stored in the dataset directory. There are individual files for each statistic's title, data, and caption in their respective folders.
+The dataset is stored in the dataset directory `dataset/` and is split into train, valid and test sets in the `data/` directory.
 
-Statistics which only contains two columns i.e simple bar or line charts are found in the dataset folder, and statistics with more than two columns i.e grouped bar or multi-line charts are found in the dataset/multiColumn folder.
+Data is split up into directories:
+* `dataset/captions/` contains the cleaned chart captions and `dataset/captions_old/` contains the uncleaned chart captions
+* `dataset/titles/` contains the cleaned chart titles and `dataset/titles_old/` contains the uncleaned chart titles
+* `dataset/data/` contains the chart data
+* `dataset/multiColumn/` contains the chart data for charts with more than two columns i.e. grouped bar charts and multi-line charts
 
-There are also uncleaned versions found in the _old folders.
 
 Chart type breakdown:
 
@@ -29,21 +24,26 @@ Chart type breakdown:
 
 Images available seperately at https://github.com/JasonObeid/Chart2TextImages due to large size ~1GB
 
-### Step1: Cleaning dataset
+### Step 1: Cleaning dataset
 
-Clean the text within the chart titles and summaries
+Clean the text within the chart titles and summaries:
 
-```
-python utils/refactorTitles.py
-
-python utils/refactorCaptions.py
-
+```python
+cd utils/
+python refactorTitles.py
 ```
 
-### Step2: Preprocessing
+```python
+cd utils/
+python refactorCaptions.py
+```
+
+
+### Step 2: Preprocessing
 
 ```
-python etc/templatePreprocess.py
+cd etc/
+python templatePreprocess.py
 ```
 
 * Converts data tables into a sequence of records (taken as input by the model): `data/*split*/trainData.txt`
@@ -53,7 +53,7 @@ python etc/templatePreprocess.py
 * Labels the summary tokens which match a record: `data/*split*/trainSummaryLabel.txt`
 * Saves the gold summaries: `data/*split*/testOriginalSummary.txt`
 
-### Step2: Extract vocabulary for each split
+### Step 3: Extract vocabulary for each split
 
 ```
 cd etc
@@ -67,7 +67,7 @@ It will generate vocabulary files for each of them:
 * `data/*split*/trainData.txt_vocab`
 * `data/*split*/trainSummary.txt_vocab`
 
-### Step3: Binarize the data for each split
+### Step 4: Binarize the data for each split
 
 ```
 cd ../model
@@ -85,14 +85,8 @@ Outputs the training data:
 * Summaries: `data/*split*/trainSummary.txt.pth`
 
 Note: if you get a dictionary assertion error, then delete the old .pth files in data subfolders and try again
-## Model Training
+## Step 5: Model Training
 ```
-MODELPATH=$PWD/model
-export PYTHONPATH=$MODELPATH:$PYTHONPATH
-
-python $MODELPATH/train.py
-
-## main parameters
 python model/train.py \
     --model_path "experiments" \
     --exp_name "chart2text" \
@@ -127,37 +121,35 @@ python model/train.py \
     --validation_metrics valid_mt_bleu
 ```
 
-## Generation
+## Step 6: Generation
 
-Use the following commands to generate from the above models:
+Pretrained models can be downloaded from the links below:
 
-[Download our model (trained with data variables)](https://drive.google.com/file/d/1BsRvnfJH5ObV8m2RU_Cl4uBB7TcPb8s8/view?usp=sharing) 
+* [Baseline model (trained with data variables)](https://drive.google.com/file/d/1BsRvnfJH5ObV8m2RU_Cl4uBB7TcPb8s8/view?usp=sharing) 
 
-[Or our baseline model adapted from Li et al. https://github.com/gongliym/data2text-transformer (trained without data variables)](https://drive.google.com/file/d/1-vNnCwFLkKsyC2f4AOVh6kkqIpAhhWlt/view?usp=sharing) 
+* [Baseline model adapted from Li et al. https://github.com/gongliym/data2text-transformer (trained without data variables)](https://drive.google.com/file/d/1-vNnCwFLkKsyC2f4AOVh6kkqIpAhhWlt/view?usp=sharing) 
 
 ```
-python model/summarize.py 
-  --model_path aug17-80.pth 
-  --table_path data/test/testData.txt \
-  --output_path results/aug17/templateOutput-p80.txt \
-  --title_path data/test/testTitle.txt --beam_size 4 --batch_size 8
+python model/summarize.py --model_path aug17-80.pth --table_path data/test/testData.txt --output_path results/aug17/templateOutput-p80.txt --title_path data/test/testTitle.txt --beam_size 4 --batch_size 8
 ```
 
-### Postprocessing after generation
+### Step 6.1: Postprocessing after generation
 Substitute any predicted data variables:
 
 ```
-python etc/summaryComparison.py
+cd etc/
+python summaryComparison.py
 ```
 
-## Evaluation
+## Step 7: Evaluation
 
-### "Content Selection" evaluation
+### Step 7.1: "Content Selection" evaluation
 ```
-python studyOutcome/automatedEvaluation.py
+cd studyOutcome/
+python automatedEvaluation.py
 ```
 
-### BLEU evaluation
+### Step 7.2: BLEU evaluation
 
 The BLEU evaluation script can be obtained from [Moses](https://github.com/moses-smt/mosesdecoder/blob/master/scripts/generic/multi-bleu.perl):
 
