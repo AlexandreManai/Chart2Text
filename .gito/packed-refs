@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled sorted 
+a7dc821445b7e450ca76f8d38b100049a8c6dd53 refs/remotes/origin/dependabot/pip/nltk-3.6.6
+16ba325f0d9b141d9eb349fcbf157967b032bf72 refs/remotes/origin/dependabot/pip/numpy-1.22.0
+1fd00011f85ab3cc3585852a02ef9ffa912a7ef5 refs/remotes/origin/dependabot/pip/pillow-9.3.0
+ab540a8ae77260b717ef2d6332d40c5839c8bf84 refs/remotes/origin/dependabot/pip/scipy-1.10.0
+81a80f719c1d42660da1b8d66805524418465980 refs/remotes/origin/dependabot/pip/scrapy-2.6.2
+eee3fde204150e690988a58f2dfb48cde24ba329 refs/remotes/origin/dependabot/pip/torch-1.13.1
+2a4b55fb1a9f5aedec1e34375095fb8a4889f035 refs/remotes/origin/dependabot/pip/transformers-4.30.0
+b400d6ddddb5454ac81e4a3d6ceeca3c08b0b98a refs/remotes/origin/master

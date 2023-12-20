@@ -1,0 +1,111 @@
+Example 1:
+titleEntities: {'Subject': ['Countries'], 'Date': ['2050', '2055']}
+title: Countries with the lowest fertility rate globally 2050 to 2055
+X_Axis['Country']: ['Singapore', 'Republic_of_Korea', 'United_Arab_Emirates', 'Puerto_Rico', 'Bosnia_and_Herzegovina', 'Saint_Lucia', 'Greece', 'Cyprus', 'Italy', 'Republic_of_Moldova', 'China_Taiwan_Province_of_China', 'Albania', 'Mauritius', 'Thailand', 'Qatar', 'Nepal', 'Croatia', 'Japan', 'Serbia', 'Brazil', 'North_Macedonia', 'Brunei_Darussalam', 'Portugal', 'Spain', 'Canada']
+Y_Axis['Average', 'number', 'of', 'children', 'per', 'woman']: ['1.38', '1.44', '1.45', '1.45', '1.47', '1.48', '1.5', '1.51', '1.51', '1.52', '1.53', '1.53', '1.54', '1.54', '1.56', '1.56', '1.56', '1.57', '1.57', '1.58', '1.58', '1.59', '1.59', '1.59', '1.59']
+
+gold: This statistic shows the countries and territories with the lowest projected fertility rate between 2050 and 2055 . Between 2050 and 2055 , Singapore is projected to have the lowest fertility rate , with an average of 1.38 children born per woman .
+gold_template: This statistic shows the templateTitleSubject[0] and territories templateTitle[1] the templateTitle[2] projected templateTitle[3] templateTitle[4] between templateTitleDate[min] and templateTitleDate[max] . Between templateTitleDate[min] and templateTitleDate[max] , templateXValue[0] is projected to have the templateTitle[2] templateTitle[3] templateTitle[4] , templateTitle[1] an templateYLabel[0] of templateYValue[min] templateYLabel[2] born templateYLabel[3] templateYLabel[4] .
+
+generated_template: This statistic shows templateYLabel[0] templateYLabel[1] in leading economies worldwide in templateTitleDate[0] . In the templateXValue[6] templateXValue[16] , templateYLabel[0] templateYLabel[1] stood at templateYValue[16] templateYLabel[2] templateYLabel[3] templateYLabel[4] templateYLabel[5] templateYLabel[6] . In the templateXValue[6] , templateYLabel[0] users paid templateYValue[6] templateYLabel[2] templateYLabel[3] templateYLabel[4] templateYLabel[5] templateYLabel[6] .
+generated: This statistic shows Average number in leading economies worldwide in 2050 .  In the Greece Croatia , Average number stood at 1.56 children per woman .  In the Greece , Average users paid 1.5 children per woman .
+
+Example 2:
+titleEntities: {'Subject': ['U.S.'], 'Date': []}
+title: Expenditure of affluent U.S. households on fees for social , recreation , health club
+X_Axis['Year']: ['2013', '2014', '2015', '2016']
+Y_Axis['Amount', 'spent', 'in', 'U.S.', 'dollars']: ['46.58', '47.39', '51.52', '56.15']
+
+gold: The statistic shows the expenditure of affluent households , or the so-called highest quintile , in the United States on fees and admissions for social , recreation , health club membership from 2013 to 2016 . In 2016 , affluent Americans spent some 56 U.S. dollars on fees and admissions for social , recreation , health club membership .
+gold_template: The statistic shows the templateTitle[0] of templateTitle[1] templateTitle[3] , or the so-called highest quintile , in the templateTitle[2] on templateTitle[4] and admissions templateTitle[5] templateTitle[6] , templateTitle[7] , templateTitle[8] templateTitle[9] membership from templateXValue[min] to templateXValue[max] . In templateXValue[max] , templateTitle[1] Americans templateYLabel[1] some templateYValue[max] templateYLabel[2] templateYLabel[3] on templateTitle[4] and admissions templateTitle[5] templateTitle[6] , templateTitle[7] , templateTitle[8] templateTitle[9] membership .
+
+generated_template: The statistic shows the templateYLabel[1] of the Disaster Recovery as a Service ( templateTitleSubject[0] ) templateYLabel[0] templateTitle[2] , from templateXValue[min] to templateXValue[max] . In templateXValue[1] , the global templateTitleSubject[0] templateYLabel[0] was predicted to reach templateYValue[1] templateScale templateYLabel[3] templateYLabel[4] in templateYLabel[1] . Additional information - Disaster Recovery as a Service ( templateTitleSubject[0] ) Within the field of information technology , disaster recovery is the process of replicating data on servers , either physical or virtual , as a precaution against man-made or natural disasters .
+generated: The statistic shows the spent of the Disaster Recovery as a Service ( U.S. ) Amount U.S. , from 2013 to 2016 .  In 2014 , the global U.S. Amount was predicted to reach 47.39 billion dollars in spent .  Additional information - Disaster Recovery as a Service ( U.S. ) Within the field of information technology , disaster recovery is the process of replicating data on servers , either physical or virtual , as a precaution against man-made or natural disasters .
+
+Example 3:
+titleEntities: {'Subject': ['New Orleans'], 'Date': ['2017']}
+title: Quarterly average daily rate in hotels in New Orleans 2016 to 2017
+Data:
+           0    1    2    3
+Quarter   Q1   Q2   Q3   Q4
+2016     184  194  145  183
+2017     189    0    0    0 
+
+gold: This statistic shows the quarterly average daily rate in hotels in New Orleans in 2016 and 2017 . In the first quarter of 2017 , the average daily rate for hotels in New Orleans in the United States was 189 U.S. dollars .
+gold_template: This statistic shows the templateTitle[0] templateTitle[1] templateTitle[2] templateTitle[3] in templateTitle[4] in templateTitleSubject[0] in templateTitleDate[min] and templateTitleDate[max] . In the first templateLabel[0][0] of templateTitleDate[max] , the templateTitle[1] templateTitle[2] templateTitle[3] for templateTitle[4] in templateTitleSubject[0] in the country was templateValue[2][max] U.S. dollars .
+
+generated_template: This statistic shows the templateTitle[0] templateTitle[1] templateTitle[2] templateTitle[3] of templateTitle[4] in templateTitleSubject[0] in templateTitleDate[min] and templateTitleDate[max] . In the first templateLabel[0][0] of templateTitleDate[max] , the templateTitle[1] templateTitle[2] templateTitle[3] of templateTitle[4] in templateTitleSubject[0] in the country was templateValue[2][max] U.S. dollars .
+generated: This statistic shows the Quarterly average daily rate of hotels in New Orleans 2017 and .  In the first Quarter of 2017 , the average daily rate of hotels in New Orleans the country was 189 U.S. dollars .
+
+Example 4:
+titleEntities: {'Subject': ['U.S'], 'Date': []}
+title: Population age structure in metropolitan areas in the U.S .
+Data:
+                                                                       0                                        1                                       2                                   3                                               4                                  5                                           6                                                7                                      8                                  9
+Area               New_York_-_Northern_New_Jersey_-_Long_Island_NY-NJ-PA  Los_Angeles_-_Long_Beach_-_Santa_Ana_CA  Chicago_-_Naperville_-_Joliet_IL-IN-WI  Dallas_-_Fort_Worth_-_Arlington_TX  Philadelphia_-_Camden_-_Wilmington_PA-NJ-DE-MD  Houston_-_Sugar_Land_-_Baytown_TX  Miami_-_Fort_Lauderdale_-_Pompano_Beach_FL  Washington_-_Arlington_-_Alexandria_DC-VA-MD-WV  Atlanta_-_Sandy_Springs_-_Marietta_GA  Boston_-_Cambridge_-_Quincy_MA-NH
+Under 18 years                                                   4423734                                  3256354                                 2436723                             1806339                                         1399360                            1673274                                     1251716                                          1337831                                1476554                             993673
+18 to 44 years                                                   7135783                                  5163207                                 3654096                             2598211                                         2183443                            2296708                                     1991118                                          2152100                                2185701                            1758176
+45 to 64 years                                                   5022623                                  3065350                                 2415975                             1489928                                         1593846                            1401077                                     1420578                                          1436495                                1342201                            1245644
+65 to 74 years                                                   1293522                                   725875                                  572564                              311959                                          396354                             285072                                      404918                                           310624                                 274841                             300875
+75 years and over                                                1194134                                   664011                                  501209                              241178                                          395249                             211358                                      478721                                           239191                                 195916                             290312 
+
+gold: This graph shows the age structure of the population in the 10 largest metropolitan areas in the U.S. in 2009 . 4.42 million people under 18 years of age were living in New York in 2009 .
+gold_template: This graph shows the templateTitle[1] templateTitle[2] of the templateTitle[0] in the 10 largest templateTitle[3] templateTitle[4] in the U.S. in 2009 . templateValue[1][0] templateScale people templateLabel[1][0] templateLabel[1][1] templateLabel[1][2] of templateTitle[1] were living in templateValue[0][0] in 2009 .
+
+generated_template: The statistic shows the templateTitle[1] templateTitle[2] templateTitle[3] in the templateTitle[0] in templateTitleDate[0] , templateTitle[4] templateLabel[0][0] . In templateTitleDate[0] , female employees working in templateValue[0][2] earned templateValue[1][2] templateTitleSubject[0] dollars per week on average , while their male counterparts earned templateValue[2][2] templateTitleSubject[0] dollars .
+generated: The statistic shows the age structure metropolitan in the Population in , areas Area .  In , female employees working in Chicago_-_Naperville_-_Joliet_IL-IN-WI earned 2436723 U.S dollars per week on average , while their male counterparts earned 3654096 U.S dollars .
+
+Example 5:
+titleEntities: {'Subject': ['Canada'], 'Date': ['2015', '2019']}
+title: Average retail price for white sugar in Canada 2015 to 2019
+Data:
+         0     1     2     3     4     5     6     7     8     9     10    11
+Month   Dec   Nov   Oct   Sep   Aug   Jul   Jun   May   Apr   Mar   Feb   Jan
+2015   2.57  2.76  2.77  2.83  2.81  2.81  2.79  2.81  2.78  2.81  2.81  2.88
+2016   2.64  2.68  2.72   2.8  2.88  2.84  2.75  2.76  2.78  2.69  2.73  2.77
+2017   2.69  2.66  2.68  2.74  2.76  2.79  2.77  2.94  2.78  2.83  2.75  2.82
+2018   2.56  2.55  2.67  2.61   2.7  2.67  2.58  2.71  2.71  2.58  2.69   2.7
+2019   2.41  2.45  2.44  2.52  2.49   2.5   2.5  2.56  2.53  2.59  2.48  2.61 
+
+gold: The average retail price for two kilograms of white sugar in Canada hit an all-time low of 2.41 Canadian dollars in December 2019 . This price has gradually decreased over time , from a monthly average of 2.79 dollars per two kilograms in 2015 . What is white sugar ? White sugar which we buy in stores is a refined sugar .
+gold_template: The templateTitle[0] templateTitle[1] templateTitle[2] templateTitle[3] templateValue[5][min] kilograms of templateTitle[4] templateTitle[5] in templateTitleSubject[0] hit an all-time low of templateValue[5][min] Canadian dollars in 2019 . This templateTitle[2] has gradually templateNegativeTrend over time , from a monthly templateTitle[0] of templateValue[1][6] dollars per templateValue[5][min] kilograms in templateTitleDate[min] . What is templateTitle[4] templateTitle[5] ? templateTitle[4] templateTitle[5] which we buy in stores is a refined templateTitle[5] .
+
+generated_template: templateTitle[0] templateTitle[2] of templateTitle[3] templateTitle[4] in templateTitleSubject[0] reached approximately templateValue[4][max] templateScale Canadian dollars in 2019 . This figure has gradually templatePositiveTrend over the given survey period – in templateTitleDate[min] the average templateTitle[0] templateTitle[2] value was templateValue[1][6] templateScale dollars . Canadians prefer shopping in-store As of 2018 , there were over 15,600 templateTitle[3] templateTitle[4] located across templateTitleSubject[0] , signaling an ongoing demand for brick-and-mortar templateTitle[3] templateTitle[4] , despite the rise of e-commerce in the Canadian templateTitle[1] sector .
+generated: Average price of for white in Canada reached approximately 2.71 million Canadian dollars in 2019 .  This figure has gradually increased over the given survey period – in 2015 the average price value was 2.79 billion dollars .  Canadians prefer shopping in-store As of 2018 , there were over 15,600 for white located across Canada , signaling an ongoing demand for brick-and-mortar white , despite the rise of e-commerce in the Canadian retail sector .
+
+Example 6:
+titleEntities: {'Subject': ['Mercedes', 'EU'], 'Date': ['2019']}
+title: Mercedes : market share of new car registrations in the EU 2019
+X_Axis['Month']: ['Dec_19', 'Nov_19', 'Oct_19', 'Sep_19', 'Aug_19', 'Jul_19', 'Jun_19', 'May_19', 'Apr_19', 'Mar_19', 'Feb_19', 'Jan_19', 'Dec_18', 'Nov_18', 'Oct_18', 'Sep_18', 'Aug_18']
+Y_Axis['Market', 'share']: ['5.9', '6.2', '6.4', '6.9', '5.7', '5.6', '4.9', '5.3', '5.5', '4.9', '5.3', '5.3', '6.6', '6.4', '6.8', '7.2', '4.6']
+
+gold: This statistic shows Mercedes 's share of new car registrations in the EU between August 2018 and December 2019 . In December 2019 , Mercedes had a market share of 5.9 percent in the EU . At 71,300 units , the brand 's vehicle sales were about 8.5 percent above the same month one year earlier , mainly thanks to increased demand from German customers .
+gold_template: This statistic shows templateTitleSubject[0] 's templateYLabel[1] of templateTitle[3] templateTitle[4] templateTitle[5] in the templateTitleSubject[1] between 2018 and 2019 . In 2019 , templateTitleSubject[0] had a templateYLabel[0] templateYLabel[1] of templateYValue[0] templateScale in the templateTitleSubject[1] . At 71,300 units , the brand 's vehicle sales were about 8.5 templateScale above the same templateXLabel[0] one year earlier , mainly thanks to templatePositiveTrend demand from German customers .
+
+generated_template: The statistic shows templateTitleSubject[0] templateTitle[1] templateYLabel[1] of templateTitle[4] templateTitle[5] templateTitle[6] in the templateTitleSubject[1] between 2018 and 2019 . In 2019 , templateTitleSubject[0] templateTitle[1] templateYLabel[1] of templateTitle[4] templateTitle[5] templateTitle[6] in the templateTitleSubject[1] stood at templateYValue[0] templateScale . The templateTitleSubject[0] Motor Company , a South Korean templateTitle[5] manufacturer belonging to the templateTitleSubject[0] Kia Automotive Group , was founded in 1967 by Chung Ju-Yung .
+generated: The statistic shows Mercedes market share of car registrations EU in the EU between 2018 and 2019 .  In 2019 , Mercedes market share of car registrations EU in the EU stood at 5.9 % .  The Mercedes Motor Company , a South Korean registrations manufacturer belonging to the Mercedes Kia Automotive Group , was founded in 1967 by Chung Ju-Yung .
+
+Example 7:
+titleEntities: {'Subject': ['Red Bull'], 'Date': ['2011']}
+title: Total workforce of Red Bull worldwide 2011 to 2018
+X_Axis['Year']: ['2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011']
+Y_Axis['Number', 'of', 'employees']: ['12239', '11886', '11865', '10997', '10410', '9694', '8966', '8294']
+
+gold: This statistic depicts the total number of Red Bull employees worldwide from 2011 to 2018 . According to the report , Red Bull had employed approximately 12,239 people in 171 countries at the end of 2018 .
+gold_template: This statistic depicts the templateTitle[0] templateYLabel[0] of templateTitleSubject[0] employees templateTitle[4] from templateXValue[min] to templateXValue[max] . According to the report , templateTitleSubject[0] had employed approximately templateYValue[max] templateYValue[idxmax(X)] in 171 countries at the end of templateXValue[idxmax(Y)] .
+
+generated_template: templateTitleSubject[0] templateTitle[1] employment was around 19,500 workers as of templateXValue[max] . templateTitleSubject[0] templateTitle[1] company goals are to create solutions to food safety and access , clean water , clean air and fuel , health care , and sustainable living . templateTitleSubject[0] Company Overview templateTitleSubject[0] is one of the world templateTitle[1] leading chemicals , plastics , and refining companies globally .
+generated: Red Bull workforce employment was around 19,500 workers as of 2018 .  Red Bull workforce company goals are to create solutions to food safety and access , clean water , clean air and fuel , health care , and sustainable living .  Red Bull Company Overview Red Bull is one of the world workforce leading chemicals , plastics and refining companies globally .
+
+Example 8:
+titleEntities: {'Subject': ['Italy'], 'Date': []}
+title: Women 's average age at first marriage in Italy 2018 , by region
+X_Axis['Month']: ['Aosta_Valley', 'Liguria', 'Emilia-Romagna', 'Tuscany', 'Sardinia', 'Friuli-Venezia_Giulia', 'Lazio', 'Trentino-South_Tyrol', 'Piedmont', 'Lombardy', 'Umbria', 'Marche', 'Veneto', 'Abruzzo', 'Molise', 'Basilicata', 'Apulia', 'Campania', 'Sicily', 'Calabria']
+Y_Axis['Average', 'age']: ['34.7', '34.1', '33.9', '33.9', '33.9', '33.6', '33.5', '33.4', '33.3', '33.1', '33.0', '32.8', '32.8', '32.8', '32.2', '32.1', '31.6', '31.0', '30.8', '30.6']
+
+gold: In 2018 , the average age of Italian women walking down the aisle was of 32.5 years . From the perspective of the singular regions , the oldest females to tie the knot were citizens of Aosta Valley and Liguria , where the average age of the bride at the first marriage reached 34.7 years and 34.1 years in 2018 . Aosta Valley was also the region with the oldest grooms in the country – a male inhabitant of the region got married at the average age of 38.2 years .
+gold_template: In templateTitleDate[0] , the templateYLabel[0] templateYLabel[1] of Italian templateTitle[0] walking down the aisle was of 32.5 years . From the perspective of the singular regions , the oldest females to tie the knot were citizens of templateXValue[0] and templateXValue[1] , where the templateYLabel[0] templateYLabel[1] of the bride at the templateTitle[4] templateTitle[5] reached templateYValue[max] years and templateYValue[1] years in templateTitleDate[0] . templateXValue[0] was also the templateTitle[9] with the oldest grooms in the country – a male inhabitant of the templateTitle[9] got married at the templateYLabel[0] templateYLabel[1] of 38.2 years .
+
+generated_template: In 2020 , the templateTitle[2] templateYLabel[0] of templateTitle[0] in templateTitleSubject[0] at their templateTitle[4] templateTitle[5] was 35,4 templateYLabel[1] . In the North-Italian templateTitle[9] of templateXValue[0] , the templateTitle[2] templateYLabel[0] of grooms was 38,2 templateYLabel[1] , the highest figure in the country . On the contrary , the templateTitle[2] templateYLabel[0] of templateTitle[0] at their templateTitle[4] templateTitle[5] was the lowest in the Southern regions of templateXValue[last] and templateXValue[18] .
+generated: In 2020 , the average of Women in Italy at their first marriage was 35,4 age .  In the North-Italian region of Aosta_Valley , the average of grooms was 38,2 age , the highest figure in the country .  On the contrary , the average of Women at their first marriage was the lowest in the Southern regions of Calabria and Sicily .
+
